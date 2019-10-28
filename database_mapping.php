@@ -94,7 +94,7 @@ foreach ($sheets[$command['m']]->getRowIterator() as $row) {
 }
 
 echo 'SELECT ' . implode($select, ', ') . ' FROM (';
-echo 'SELECT ' . implode($column, ', ') . ' FROM ';
+echo 'SELECT DISTINCT ' . implode($column, ', ') . ' FROM ';
 echo $command[1] . implode($join, '');
 
 if (!empty($order)) {
